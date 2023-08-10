@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>MLakhaBeauty</title>
+</head>
+<body>
+    <div class="container">
+      <header id = "lol">
+      <div class = "logo">
+        <h1>MLakhaBeauty</h1>
+      </div>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="www.google.com">Booking_Inquiries</a>
+          <a href="index.html">FollowMe!</a>
+          <a href="index.html">Home</a>
+        </nav>
+      </header>
+        <div class = "pictures">
+            <img src="pictures/MChoiceOne.jpeg" alt="Alternative text">
+            <img src="pictures/MChoiceTwo.jpeg"  alt="Alternative text">
+            <img src="pictures/MChoiceSix.jpeg" alt="Alternative text">
+            <img src="pictures/MChoiceFour.jpeg" alt="Alternative text">
+        </div>
+        <div id = "aboutMe">
+          <h3>Hair, Makeup, Classes, Facials and more! </h3>
+          <p>Hi! My name is Madhu and I am the owner of @MLakhaBeauty and Subway.
+            I created these subs for my clients with no intention to sell but I got amazing
+            feedback and decided to launch my own subs.
+            I hope you enjoy them as much as I did creating the subs!
+            xo</p>
+            <!-- <img src="madhu.jpg" alt=""> !-->
+        </div>
+        <div id = "services"> </div>
+        <div>Footer</div>
+    </div>
+
+    <script>
+      let lastScrollTop = 0;
+      // Get the header element
+      const header = document.querySelector("header");
+      // Add a scroll event listener to the window object
+      window.addEventListener("scroll", () => {
+        const currentScrollTop = window.pageYOffset;
+        if (currentScrollTop > lastScrollTop) {
+          // User is scrolling down
+          header.style.top = "-50px"; // Adjust the value based on the height of your header
+        } else {
+          // User is scrolling up
+          header.style.top = "0";
+        }
+        lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For Mobile or negative scrolling
+      });
+    </script>
+
+
+
+</body>
+</html>
