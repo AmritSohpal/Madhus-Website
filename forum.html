@@ -9,9 +9,19 @@
 </head>
 <body>
     <div class="grid">
-        <h1>Hello World</h1>
         <div class="bookingInquries">
-            <div class="bookingText"></div>
+            <div class="forumTitle">
+                <h1>Inquiry Form</h1>
+            </div>
+            <div class="bookingText">
+                <p>
+                    Thank you for considering MlakhaBeauty as your hair and makeup artist! Non-Bridal and Bridal booking are open for 2023. 
+                    Only Bridal bookings are open for 2024.
+                    Please fill out the questions below, once complete I will reach out to you within 3-5 business days regarding availability. In order to secure your date/time, 
+                    a retainer and signed contract is required. <br>
+                    <strong>Please provide an email! </strong>
+                </p>
+            </div>
             <div class="contactForum">
                 <form id = "clientRequest" action="">
                     <div id="inputContainer">
@@ -28,6 +38,11 @@
                         <label for="phoneNumber">Phone Number</label>
                         <input type="text" name="phoneNumber" id="phoneNumber">
                     </div>
+                    <div class="input-group">
+                        <label for="messageInput">Message</label>
+                        <textarea name="messageInput" id="messageInput" cols="30" rows="10"></textarea>
+                        
+                    </div>
                     <label for="typeOfEvent">Type of Event</label>
                     <select name="typeOfEvent" id="typeOfEvent">
                         <option value="bridal"> Bridal</option>
@@ -37,7 +52,6 @@
                         <option value="One on One classes">1 v 1</option>
                         <option value="specialEvent">Special Event</option>
                     </select>
-                    <div></div>
                 </form>
             </div>
         </div>
