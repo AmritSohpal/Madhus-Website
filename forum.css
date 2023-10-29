@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong&display=swap');
 /* Resetting default styles */
 :root {
     --bg: #fff;
@@ -20,8 +21,7 @@ html, body{
     font-size: 16px;
 }
 h1 {
-    font-size: 2rem;
-    margin-bottom: 35px;
+    font-size: 1.5rem;
 }
 a, a:visited {
     text-decoration: none;
@@ -35,6 +35,17 @@ p{
 }
 
 /* Resetting default styles ENDS */
+/*Gives enough space to scroll down and select an item from Type of event.*/
+.grid{
+    padding-bottom: 500px;
+}
+
+#inquiryTitle {
+    font-family: "Trirong", serif;
+    font-size: 2rem;
+    padding-bottom: 20px;
+  }
+  
 
 .forumTitle {
     margin-top: 30px;

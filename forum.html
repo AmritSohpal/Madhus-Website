@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scroll.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="forum.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
-    <style>#inquiryTitle{font-family: "Trirong", serif;}</style>
     <title>Document</title>
 </head>
 <body>
@@ -30,7 +29,7 @@
         <a href="#" class="header-item">Socials</a>
       </nav>
     
-    <div class="grid">
+    <div class="grid" id = "gridder">
         <div class="bookingInquries">
             <div class="forumTitle">
                 <h1 id="inquiryTitle">Inquiry Form</h1>
@@ -74,9 +73,62 @@
                         <option value="One on One classes">1 v 1</option>
                         <option value="specialEvent">Special Event</option>
                     </select>
+                    <label for="submitForum"></label>
+                    <input type="submit" name="submitForum" id="submitForum">
                 </form>
             </div>
         </div>
     </div>
+
+    <script>
+
+        //For header scroll animation
+        let lastScrollTop = 0;
+        // Get the header element
+        const header = document.querySelector("header");
+        const headerStyles = window.getComputedStyle(header);
+        // Add a scroll event listener to the window object
+        window.addEventListener("scroll", () => {
+          const currentScrollTop = window.pageYOffset;
+          if (currentScrollTop > lastScrollTop) {
+            // User is scrolling down
+            header.style.top = `-${headerStyles.getPropertyValue("height")}`; // Adjust the value based on the height of your header
+          } else {
+            // User is scrolling up
+            header.style.top = "0";
+          }
+          lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For Mobile or negative scrolling
+        });
+    
+        //For hamburger menu functions
+        const openMenu = document.getElementById("hamburgerMenu");
+        const mobileNav = document.getElementById("mobileNav");
+        const mobileNavStyles = window.getComputedStyle(mobileNav);
+        const mainContent = document.getElementById("gridder");
+        let mobileNavOpen = false;
+        mobileNav.style.top = `${headerStyles.getPropertyValue("height")}`;
+    
+        openMenu.addEventListener("click", openMobileNav); 
+        function openMobileNav() {
+          if (mobileNavOpen) {
+            openMenu.classList.remove('close-icon');
+            mobileNav.classList.remove('open-nav');
+            mainContent.style.transform = `translateY(0)`;
+            mobileNavOpen = false;
+          }
+          else {
+            openMenu.classList.add('close-icon');
+            mobileNav.classList.add('open-nav');
+            mainContent.style.transform = `translateY(${mobileNavStyles.getPropertyValue("height")})`;
+            mobileNavOpen = true;
+          }
+        }
+    
+        //Close the mobile nav if the window is resized
+        addEventListener("resize", (event) => {
+          if (mobileNavOpen) openMobileNav();
+        });
+    
+      </script>
 </body>
 </html>
