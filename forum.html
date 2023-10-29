@@ -8,30 +8,39 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello World</h1>
-    <form id = "clientRequest" action=""> <!--action will bring the form to the page inserted. -->
-        <label for="clientName">Name</label>
-        <input type="text" id = "clientName" name = "clientName">
-        <label for="email">Email</label>
-        <input type="text" id = "clientEmail" name= "email">
-        <label for="phoneNumber">Phone Number</label>
-        <input type="text" name="phoneNumber" id="phoneNumber">
-        <label for="typeOfEvent">Type of Event</label>
-        <select name="typeOfEvent" id="typeOfEvent">
-            <option value="bridal"> Bridal</option>
-            <option value="nonBridal">Non-Bridal</option>
-            <option value="bridalNonBridal">Bridal & Non-Bridal</option>
-            <option value="photoShoot">photoshoot</option>
-            <option value="One on One classes">1 v 1</option>
-            <option value="specialEvent">Special Event</option>
-        </select>
-        <label for="numHairClients">Number of Hair Clients</label>
-        <input type="text" for = "numHairClients" id = "numHairClients">
-        <label for="numHairClients">Number of Makeup Clients</label>
-        <input type="text" for = "numMakeupClients" id = "numMakeupClients">
-
-    </form>
-
-    
+    <div class="grid">
+        <h1>Hello World</h1>
+        <div class="bookingInquries">
+            <div class="bookingText"></div>
+            <div class="contactForum">
+                <form id = "clientRequest" action="">
+                    <div id="inputContainer">
+                        <div class="input-group">
+                            <label for="clientName" id="clientName">Name</label>
+                            <input type="text" id="clientName" name="clientName">
+                        </div>
+                        <div class="input-group">
+                            <label for="email" id="clientEmail">Email*</label>
+                            <input type="text" id="clientEmail" name="email">
+                        </div>
+                    </div>
+                    <div class="input-group" id = "inputNumber">
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="text" name="phoneNumber" id="phoneNumber">
+                    </div>
+                    <label for="typeOfEvent">Type of Event</label>
+                    <select name="typeOfEvent" id="typeOfEvent">
+                        <option value="bridal"> Bridal</option>
+                        <option value="nonBridal">Non-Bridal</option>
+                        <option value="bridalNonBridal">Bridal & Non-Bridal</option>
+                        <option value="photoShoot">photoshoot</option>
+                        <option value="One on One classes">1 v 1</option>
+                        <option value="specialEvent">Special Event</option>
+                    </select>
+                    <div></div>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

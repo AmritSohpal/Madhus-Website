@@ -1,0 +1,60 @@
+.bookingInquries > .contactForum > #clientRequest > #inputContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    
+}
+.input-group {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Adjusted width to fit two side by side */
+    /*padding-left: 15px;
+    padding-right: 15px;*/
+    flex-wrap: wrap;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+
+#inputContainer #clientName{
+    margin-right: 15px;
+}
+
+#inputContainer #clientEmail{
+    margin-left: 15px;
+}
+
+
+
+#inputNumber label,
+#inputNumber input,
+#inputContainer label,
+#inputContainer input {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#inputContainer label{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.grid{
+    padding-left: 55px;
+    padding-right: 55px;
+}
+
+@media screen and (max-width: 768px) {
+    .bookingInquries > .contactForum > #clientRequest > #inputContainer{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+    #inputContainer #clientEmail{
+        margin-left: 0px;
+    }
+    #inputContainer #clientName{
+        margin-right: 0px;
+    }
+}
