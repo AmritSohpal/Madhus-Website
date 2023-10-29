@@ -1,3 +1,48 @@
+/* Resetting default styles */
+:root {
+    --bg: #fff;
+    --primary-color: #fff;
+    --txt-color: #3a3a3a;
+    --txt-focus: #fff;
+    --text-font: Helvetica, Arial, sans-serif;
+}
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: inherit;
+}
+html, body{
+    height: 100%;
+    font-family: var(--text-font);
+    color: var(--txt-color);
+    background-color: var(--bg);
+    font-size: 16px;
+}
+h1 {
+    font-size: 2rem;
+    margin-bottom: 35px;
+}
+a, a:visited {
+    text-decoration: none;
+    color: var(--txt-color);
+}
+
+p{
+    line-height: 1.5;
+    word-spacing: 5px;
+    padding-bottom: 10px;
+}
+
+/* Resetting default styles ENDS */
+
+.forumTitle {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .bookingInquries > .contactForum > #clientRequest > #inputContainer{
     display: flex;
     flex-direction: row;
@@ -21,6 +66,8 @@
 }
 
 
+/* #inputContainer #clientName & #clientEmail allows 
+    seperation inbetween then flexbox is in row form.*/
 #inputContainer #clientName{
     margin-right: 15px;
 }
@@ -35,7 +82,6 @@ width: 100%;
   padding: 12px 20px;
   box-sizing: border-box;
   border: 0.5px solid #ccc;
-  
   resize: none;
 }
 
