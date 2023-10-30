@@ -68,6 +68,8 @@
       if (currentScrollTop > lastScrollTop) {
         // User is scrolling down
         header.style.top = `-${headerStyles.getPropertyValue("height")}`; // Adjust the value based on the height of your header
+        //Close mobile nav
+        if (mobileNavOpen) openMobileNav();
       } else {
         // User is scrolling up
         header.style.top = "0";
@@ -81,8 +83,7 @@
     const mobileNavStyles = window.getComputedStyle(mobileNav);
     const mainContent = document.getElementById("mainContent");
     let mobileNavOpen = false;
-    mobileNav.style.top = `${headerStyles.getPropertyValue("height")}`;
-
+    mobileNav.style.top = `calc(1px + ${headerStyles.getPropertyValue("height")})`;
     openMenu.addEventListener("click", openMobileNav); 
     function openMobileNav() {
       if (mobileNavOpen) {
@@ -99,8 +100,8 @@
       }
     }
 
-    //Close the mobile nav if the window is resized
-    addEventListener("resize", (event) => {
+    //Close the mobile nav if the window is resized or window is scrolled
+    addEventListener("resize", () => {
       if (mobileNavOpen) openMobileNav();
     });
 
