@@ -6,6 +6,7 @@
     --txt-color: #3a3a3a;
     --txt-focus: #606060;
     --text-font: Helvetica, Arial, sans-serif;
+    --header-height: 4.375rem;
 }
 *, *::after, *::before {
     margin: 0;
@@ -36,6 +37,7 @@ header{
     justify-content: space-between;
     position: fixed;
     top: 0;
+    height: var(--header-height);
     width: 100%;
     padding: 1.2rem 1.5rem;
     transition: top 0.3s ease-in-out;
@@ -98,39 +100,58 @@ header{
     }
 }
 
-.main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
-    /*To animate on mobile header open and close */
-    transition: all .45s cubic-bezier(.29,.63,.44,1);
+.img-banner {
+    height: 600px;
 }
-/*
-.main div{
-    flex-grow: 1;
-    /*border: 1px solid pink;
-    width: 100%
-}*/
-
-.main > .pictures {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-grow: 1;
-    /*border: 1px solid pink;*/
-    width: 100%;
-
-}
-.main > .pictures > img {
+.img-banner img {
+    position: fixed;
     width: 25%;
-    height: 500px;
+    height: 600px;
     object-fit: cover;
-    flex-grow: 1;
-  }
+}
+.img-banner img:nth-child(1) {
+    left: 0;
+}
+.img-banner img:nth-child(2) {
+    left: 25%;
+}
+.img-banner img:nth-child(3) {
+    left: 50%;
+}
+.img-banner img:nth-child(4) {
+    left: 75%;
+}
+@media screen and (max-width: 768px) {
+    .img-banner img{
+        width: 50%;
+        height: 300px;
+    }
+    .img-banner img:nth-child(1) {
+        left: 0;
+    }
+    .img-banner img:nth-child(2) {
+        left: 50%;
+    }
+    .img-banner img:nth-child(3) {
+        left: 0;
+        top: 300px;
+    }
+    .img-banner img:nth-child(4) {
+        left: 50%;
+        top: 300px;
+    }
+}
 
-.main> .MadhuProfile {
+/* Main Content absolute positioned for parallax effect */
+.main {
+    position: absolute;
+    left: 50%; 
+    transform: translateX(-50%);
+    width: 100%;
+    background: var(--bg);
+}
+
+.main > .MadhuProfile {
     
     padding-top: 10rem;
     padding-bottom: 10rem;
@@ -141,8 +162,6 @@ header{
     justify-content: space-around;
     
 }
-
-
 
 .main> .MadhuProfile  >.aboutMe {
     display: flex;
@@ -174,16 +193,6 @@ header{
 }
 
 @media screen and (max-width: 768px) {
-    .main > .pictures{
-      flex-direction: column;
-      align-items: center;
-    }
-    .main > .pictures > img{
-        width: 85%;
-        height: auto;
-        background-color:rgb(241, 238, 236) ;
-        --bg-overlay-color: rgb(241, 238, 236);
-    }
   
     .main> .MadhuProfile{
         display: flex;
