@@ -84,18 +84,21 @@
     const mainContent = document.getElementById("mainContent");
     let mobileNavOpen = false;
     mobileNav.style.top = `calc(1px + ${headerStyles.getPropertyValue("height")})`;
+    //Offset the main content by the header height
+    mainContent.style.transform = `translateY(${headerStyles.getPropertyValue("height")})` 
     openMenu.addEventListener("click", openMobileNav); 
     function openMobileNav() {
       if (mobileNavOpen) {
         openMenu.classList.remove('close-icon');
         mobileNav.classList.remove('open-nav');
-        mainContent.style.transform = `translateY(0)`;
+        mainContent.style.transform = `translateY(${headerStyles.getPropertyValue("height")})`;
         mobileNavOpen = false;
       }
       else {
         openMenu.classList.add('close-icon');
         mobileNav.classList.add('open-nav');
-        mainContent.style.transform = `translateY(${mobileNavStyles.getPropertyValue("height")})`;
+        //Offset the maincontent pos by the header and nav height
+        mainContent.style.transform = `translateY(calc(${mobileNavStyles.getPropertyValue("height")} + ${headerStyles.getPropertyValue("height")}))`;
         mobileNavOpen = true;
       }
     }
