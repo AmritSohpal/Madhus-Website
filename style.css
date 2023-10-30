@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong&display=swap');
 /* Resetting default styles */
 :root {
     --bg: #efefef;
@@ -104,16 +105,20 @@ header{
     /*To animate on mobile header open and close */
     transition: all .45s cubic-bezier(.29,.63,.44,1);
 }
+/*
 .main div{
     flex-grow: 1;
-    /*border: 1px solid pink;*/
+    /*border: 1px solid pink;
     width: 100%
-}
+}*/
 
 .main > .pictures {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-grow: 1;
+    /*border: 1px solid pink;*/
+    width: 100%;
 
 }
 .main > .pictures > img {
@@ -123,49 +128,81 @@ header{
     flex-grow: 1;
   }
 
+.main> .MadhuProfile {
+    
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    padding-left: 32px;
+    padding-right: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+
+
+.main> .MadhuProfile  >.aboutMe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+
+.main> .MadhuProfile > .profilePicture > img {
+    width: 100%;
+    flex-grow: 1;
+    height: 500px;
+    object-fit: cover;
+}
+
+
+.main> .MadhuProfile >.aboutMe > h3 {
+    font-family: "Trirong", serif;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.main> .MadhuProfile >.aboutMe > p {
+    line-height: 1.5;
+    word-spacing: 5px;
+    padding-bottom: 10px;
+
+}
+
 @media screen and (max-width: 768px) {
     .main > .pictures{
       flex-direction: column;
       align-items: center;
     }
     .main > .pictures > img{
+        width: 85%;
+        height: auto;
+        background-color:rgb(241, 238, 236) ;
+        --bg-overlay-color: rgb(241, 238, 236);
+    }
+  
+    .main> .MadhuProfile{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        background-color: rgba(0,0,0,0.04);
+        
+    }
+    .main> .MadhuProfile > .profilePicture {
+        margin-top: 70px;
+        height: auto;
+        
+    }
+    main> .MadhuProfile > .profilePicture > img{
         width: 70%;
         height: auto;
     }
-    .main > #aboutMe {
-        flex-direction: column-reverse;
-        align-items: center;
+    .main> .MadhuProfile > .aboutMe {
+        width: 90%
     }
-    /*
-    .main > #aboutMe > img {
-        max-width: 363.4823625922887px;
-        max-height: 545px;
-    }
-    */
-    #aboutMe > p {
-        padding: 20px;
-    }
+
   }
 
-#aboutMe {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f4c0a4;
-    padding: 100px;
 
-}
-/*
-#aboutMe > img{
-    width: 363px;
-    height: 544.98px;
-    margin-top: 40px;
-}
-*/
-
-#aboutMe p{
-    padding-left: 40px;
-    object-fit: cover;
-    margin-top: 20px;
-
-}
