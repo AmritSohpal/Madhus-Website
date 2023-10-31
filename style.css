@@ -42,7 +42,6 @@ a, a:visited {
 
 /* General section styles */
 section {
-    padding: 0 var(--left-right-padding);
     margin: 5rem 0;
 }
 .full-width {
@@ -50,10 +49,14 @@ section {
     width: 100%;
 }
 .page-width {
+    width: 100%;
     max-width: var(--page-width);
+    padding: 0 var(--left-right-padding);
 }
 .page-width-small {
+    width: 100%;
     max-width: var(--page-width-small);
+    padding: 0 var(--left-right-padding);
 }
 .grid-center {
     display: grid;
