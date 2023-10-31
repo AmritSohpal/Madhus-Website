@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong&display=swap');
 /* Resetting default styles */
 :root {
+    --page-width: 1400px;
+    --page-width-small: 1100px;
+    --left-right-padding: 1.5rem;
     --bg: #efefef;
     --primary-color: #fff;
     --txt-color: #3a3a3a;
@@ -22,27 +25,65 @@ html, body{
     font-size: 16px;
 }
 h1 {
+    font-family: "Trirong", serif;
     font-size: 1.5rem;
+}
+h2 {
+    font-family: "Trirong", serif;
+    font-size: 2.5rem;
+}
+p {
+    line-height: 1.5rem;
 }
 a, a:visited {
     text-decoration: none;
     color: var(--txt-color);
 }
 
+/* General section styles */
+section {
+    padding: 0 var(--left-right-padding);
+    margin: 5rem 0;
+}
+.full-width {
+    background-color: var(--bg);
+    width: 100%;
+}
+.page-width {
+    max-width: var(--page-width);
+}
+.page-width-small {
+    max-width: var(--page-width-small);
+}
+.grid-center {
+    display: grid;
+    place-items: center;
+}
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+}
+.inline-link {
+    text-decoration: underline;
+}
+
 /* Header Styles */
+.header-container {
+    position: fixed;
+    top: 0; 
+    height: var(--header-height);
+    transition: top 0.3s ease-in-out;
+    z-index: 5;
+}
 header{
     display: grid;
     grid-template-columns: auto auto;
     align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    height: var(--header-height);
+    justify-content: space-between;  
     width: 100%;
-    padding: 1.2rem 1.5rem;
-    transition: top 0.3s ease-in-out;
-    background-color: var(--bg);
-    z-index: 5;
+    padding: 0 var(--left-right-padding);
 }
 .header-icon {
     display: none;
@@ -100,50 +141,27 @@ header{
     }
 }
 
+/* Parallax image banner styles */
 .img-banner {
     height: 600px;
 }
-.img-banner img {
+.parallax {
     position: fixed;
+}
+.img-banner img {
     width: 25%;
     height: 600px;
     object-fit: cover;
-}
-.img-banner img:nth-child(1) {
-    left: 0;
-}
-.img-banner img:nth-child(2) {
-    left: 25%;
-}
-.img-banner img:nth-child(3) {
-    left: 50%;
-}
-.img-banner img:nth-child(4) {
-    left: 75%;
 }
 @media screen and (max-width: 768px) {
     .img-banner img{
         width: 50%;
         height: 300px;
     }
-    .img-banner img:nth-child(1) {
-        left: 0;
-    }
-    .img-banner img:nth-child(2) {
-        left: 50%;
-    }
-    .img-banner img:nth-child(3) {
-        left: 0;
-        top: 300px;
-    }
-    .img-banner img:nth-child(4) {
-        left: 50%;
-        top: 300px;
-    }
 }
 
 /* Main Content absolute positioned for parallax effect */
-.main {
+main {
     position: absolute;
     left: 50%; 
     transform: translateX(-50%);
@@ -151,69 +169,27 @@ header{
     background: var(--bg);
 }
 
-.main > .MadhuProfile {
-    
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-    padding-left: 32px;
-    padding-right: 32px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    
+/* About Me section styles */
+.img-w-text {
+    grid-template-columns: auto 1fr;
+    gap: 3rem;
 }
-
-.main> .MadhuProfile  >.aboutMe {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 60%;
+.profile-picture {
+    background-image: url(pictures/Madhu.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    height: 350px;
+    width: 350px;
 }
-
-.main> .MadhuProfile > .profilePicture > img {
-    width: 100%;
-    flex-grow: 1;
-    height: 500px;
-    object-fit: cover;
-}
-
-
-.main> .MadhuProfile >.aboutMe > h3 {
-    font-family: "Trirong", serif;
-    font-size: 32px;
-    margin-bottom: 25px;
-}
-
-.main> .MadhuProfile >.aboutMe > p {
-    line-height: 1.5;
-    word-spacing: 5px;
-    padding-bottom: 10px;
-
-}
-
 @media screen and (max-width: 768px) {
-  
-    .main> .MadhuProfile{
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-        background-color: rgba(0,0,0,0.04);
-        
+    .img-w-text {
+        grid-template-columns: auto;
     }
-    .main> .MadhuProfile > .profilePicture {
-        margin-top: 70px;
-        height: auto;
-        
+    .profile-picture {
+        height: 250px;
+        width: 250px;
     }
-    main> .MadhuProfile > .profilePicture > img{
-        width: 70%;
-        height: auto;
-    }
-    .main> .MadhuProfile > .aboutMe {
-        width: 90%
-    }
+}
 
-  }
 
 

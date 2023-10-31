@@ -9,18 +9,20 @@
     <title>MLakhaBeauty</title>
 </head>
 <body>
-  <header>
-    <a href="#" class = "logo">
-      <h1>MLakhaBeauty</h1>
-    </a>
-    <div id="hamburgerMenu" class="header-icon"> </div>
-    <nav class="header-nav header-nav-desktop">
-      <a href="index.html" class="header-item">Home</a>
-      <a href="#" class="header-item">Services</a>
-      <a href="forum.html" class="header-item">Bookings</a>
-      <a href="#" class="header-item">Socials</a>
-    </nav>
-  </header>
+  <div id="headerContainer" class="full-width grid-center header-container">
+    <header class="page-width">
+      <a href="#" class = "logo">
+        <h1>MLakhaBeauty</h1>
+      </a>
+      <div id="hamburgerMenu" class="header-icon"> </div>
+      <nav class="header-nav header-nav-desktop">
+        <a href="index.html" class="header-item">Home</a>
+        <a href="#" class="header-item">Services</a>
+        <a href="forum.html" class="header-item">Bookings</a>
+        <a href="#" class="header-item">Socials</a>
+      </nav>
+    </header>
+  </div>
   <nav id="mobileNav" class="header-nav header-nav-mobile">
     <a href="index.html" class="header-item">Home</a>
     <a href="#" class="header-item">Services</a>
@@ -28,39 +30,40 @@
     <a href="#" class="header-item">Socials</a>
   </nav>
 
-  <div id="banner" class="img-banner">
-    <img src="pictures/MChoiceOne_resize.jpeg"></img>
-    <img src="pictures/MChoiceTwo_resize.jpeg"></img>
-    <img src="pictures/MChoiceSix_resize.jpeg"></img>
-    <img src="pictures/MChoiceFour_resize.jpeg"></img>
+  <div class="full-width img-banner">
+    <div id="banner" class="flex-wrap parallax">
+      <img src="pictures/MChoiceOne_resize.jpeg"></img>
+      <img src="pictures/MChoiceTwo_resize.jpeg"></img>
+      <img src="pictures/MChoiceSix_resize.jpeg"></img>
+      <img src="pictures/MChoiceFour_resize.jpeg"></img>
+    </div>
   </div>
 
-  <div id="mainContent" class="main">
-      <div class="MadhuProfile">
-        <div class="profilePicture">
-          <img src="pictures/Madhu.jpg" alt="">
-        </div>
-        <div class="aboutMe">
-          <h3>About Me</h3>
-          <p>Madhu Lakha is a seasoned hair and makeup artist located in Northern California. 
-            With a decade of experience, she has diligently catered to clients across Sacramento, 
-            the Bay Area, and neighboring cities. Despite her proficiency in her field, 
-            Madhu remains dedicated to continuous learning 
-            and has recently completed a course with "Vancouver Chick." 
-            For booking inquiriesplease proceed to fill out the inquiry form available on this website.
+  <main id="mainContent">
+
+    <section id="aboutMe" class="full-width grid-center">
+      <div class="page-width-small grid-center img-w-text">
+        <div class="profile-picture"></div>
+        <div class="img-text">
+          <h2>About Me</h2>
+          <p>Madhu Lakha is a seasoned hair and makeup artist located in Northern California, with a decade of experience. She has diligently catered to clients across Sacramento, the Bay Area, and neighboring cities. Despite her proficiency in her field, Madhu remains dedicated to continuous learning and has recently completed a course with "Vancouver Chick". For booking inquiries please fill out the <a href="forum.html" class="inline-link">booking form</a>.
           </p>
         </div>
       </div>
-      <div id = "services"> </div>
-      <div>Footer</div>
-  </div>
+    </section>
+
+    <section id="services"> </section>
+      
+  </main>
+
+  <div>Footer</div>
 
   <script>
 
     //For header scroll animation
     let lastScrollTop = 0;
     // Get the header element
-    const header = document.querySelector("header");
+    const header = document.getElementById("headerContainer");
     const headerStyles = window.getComputedStyle(header);
     // Add a scroll event listener to the window object
     window.addEventListener("scroll", () => {
