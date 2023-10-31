@@ -178,6 +178,7 @@ header{
 }
 .parallax {
     position: fixed;
+    width: 100%;
 }
 .img-banner img {
     width: 25%;
