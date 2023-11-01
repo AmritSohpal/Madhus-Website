@@ -66,7 +66,7 @@ a, a:visited {
 
 /* General section styles */
 section {
-    margin: 5rem 0;
+    margin: 4rem 0;
     padding: 1.2rem 0;
 }
 .full-width {
@@ -98,6 +98,22 @@ section {
 }
 .inline-link {
     text-decoration: underline;
+}
+.slide-in {
+    transform: translateY(10px);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.slide-in-animate {
+    transform: translateY(0);
+    opacity: 1;
+}
+.fade-in {
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.fade-in-animate {
+    opacity: 1;
 }
 
 /* Header Styles */
@@ -174,7 +190,7 @@ header{
 
 /* Parallax image banner styles */
 .img-banner {
-    height: 600px;
+    height: 700px;
 }
 .parallax {
     position: fixed;
@@ -182,13 +198,13 @@ header{
 }
 .img-banner img {
     width: 25%;
-    height: 600px;
+    height: 700px;
     object-fit: cover;
 }
 @media screen and (max-width: 768px) {
     .img-banner img{
         width: 50%;
-        height: 300px;
+        height: 350px;
     }
 }
 

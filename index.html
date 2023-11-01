@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="scroll.css">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>MLakhaBeauty</title>
 </head>
 <body>
@@ -30,7 +31,7 @@
     <a href="#" class="header-item">Socials</a>
   </nav>
 
-  <div class="full-width img-banner">
+  <div class="full-width img-banner fade-in">
     <div id="banner" class="flex-wrap parallax">
       <img src="pictures/MChoiceOne_resize.jpeg">
       <img src="pictures/MChoiceTwo_resize.jpeg">
@@ -43,8 +44,8 @@
 
     <section id="aboutMe" class="full-width grid-center">
       <div class="page-width-small grid-center img-w-text">
-        <div class="profile-picture"></div>
-        <div class="img-text">
+        <div class="profile-picture slide-in"></div>
+        <div class="img-text slide-in">
           <h2>About Me</h2>
           <p>Madhu Lakha is a seasoned hair and makeup artist located in Northern California, with a decade of experience. She has diligently catered to clients across Sacramento, the Bay Area, and neighboring cities. Despite her proficiency in her field, Madhu remains dedicated to continuous learning and has recently completed a course with "Vancouver Chick". For booking inquiries please fill out the <a href="forum.html" class="inline-link">booking form</a>.
           </p>
@@ -54,24 +55,24 @@
 
     <section id="services" class="full-width secondary-bg grid-center">
       <div class="page-width">
-        <h2>Services</h2>
+        <h2 class="slide-in">Services</h2>
         <div class="grid-center multicolumn">
-          <div class="card">
+          <div class="card slide-in">
             <img class="card-img" src="pictures/MChoiceFour_resize.jpeg">
             <h3>Service Name</h3>
             <button class="btn card-btn">Book Now</button>
           </div>
-          <div class="card">
+          <div class="card slide-in">
             <img class="card-img" src="pictures/MChoiceFour_resize.jpeg">
             <h3>Service Name</h3>
             <button class="btn card-btn">Book Now</button>
           </div>
-          <div class="card">
+          <div class="card slide-in">
             <img class="card-img" src="pictures/MChoiceFour_resize.jpeg">
             <h3>Service Name</h3>
             <button class="btn card-btn">Book Now</button>
           </div>
-          <div class="card">
+          <div class="card slide-in">
             <img class="card-img" src="pictures/MChoiceFour_resize.jpeg">
             <h3>Service Name</h3>
             <button class="btn card-btn">Book Now</button>
@@ -83,58 +84,6 @@
   </main>
 
   <div>Footer</div>
-
-  <script>
-
-    //For header scroll animation
-    let lastScrollTop = 0;
-    // Get the header element
-    const header = document.getElementById("headerContainer");
-    const headerStyles = window.getComputedStyle(header);
-    // Add a scroll event listener to the window object
-    window.addEventListener("scroll", () => {
-      const currentScrollTop = window.pageYOffset;
-      if (currentScrollTop > lastScrollTop) {
-        // User is scrolling down
-        header.style.top = `-${headerStyles.getPropertyValue("height")}`; // Adjust the value based on the height of your header
-        //Close mobile nav
-        if (mobileNavOpen) openMobileNav();
-      } else {
-        // User is scrolling up
-        header.style.top = "0";
-      }
-      lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For Mobile or negative scrolling
-    });
-
-    //For hamburger menu functions
-    let mobileNavOpen = false;
-    const openMenu = document.getElementById("hamburgerMenu");
-    const mobileNav = document.getElementById("mobileNav");
-    const mobileNavStyles = window.getComputedStyle(mobileNav);
-    const mainContent = document.getElementById("mainContent");
-    mobileNav.style.top = `calc(1px + ${headerStyles.getPropertyValue("height")})`;
-
-    openMenu.addEventListener("click", openMobileNav); 
-    function openMobileNav() {
-      if (mobileNavOpen) {
-        openMenu.classList.remove('close-icon');
-        mobileNav.classList.remove('open-nav');
-        mobileNavOpen = false;
-      }
-      else {
-        openMenu.classList.add('close-icon');
-        mobileNav.classList.add('open-nav');
-        mobileNavOpen = true;
-      }
-    }
-    //Close the mobile nav if the window is resized 
-    addEventListener("resize", () => {
-      if (mobileNavOpen) openMobileNav();
-    });
-
-  </script>
-
-
 
 </body>
 </html>
