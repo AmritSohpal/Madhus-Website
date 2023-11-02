@@ -100,17 +100,17 @@ section {
     text-decoration: underline;
 }
 .slide-in {
-    transform: translate3d(0, 10px, 0);
+    transform: translateY(10px);
     opacity: 0;
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 .slide-in-animate {
-    transform: translate3d(0, 0, 0);
+    transform: translateY(0);
     opacity: 1;
 }
 .fade-in {
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 .fade-in-animate {
     opacity: 1;
@@ -155,13 +155,13 @@ header{
     position: fixed;
     top: 0;
     left: 0;
-    transform: translate3d(0, -130%, 0);
+    transform: translateY(-130%);
     width: 100%;
     grid-column: 1 / span 2;
     flex-direction: column;
     background-color: var(--bg);
     border-top: 1px #000 solid;
-    transition: transform .45s cubic-bezier(.29,.63,.44,1);
+    transition: all .45s cubic-bezier(.29,.63,.44,1);
     z-index: 4;
 }
 .header-nav-mobile .header-item {
@@ -169,7 +169,7 @@ header{
     border-bottom: 1px rgb(197, 197, 197) solid;
 }
 .open-nav {
-    transform: translate3d(0, 0, 0) !important;
+    transform: translateY(0) !important;
 }
 /* Hamburger Menu */
 @media screen and (max-width: 768px) {
@@ -212,7 +212,7 @@ header{
 main {
     position: absolute;
     left: 50%; 
-    transform: translate3d(-50%, 0, 0);
+    transform: translateX(-50%);
     width: 100%;
     background: var(--bg);
 }
