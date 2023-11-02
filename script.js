@@ -10,11 +10,11 @@ const headerStyles = window.getComputedStyle(header);
 window.addEventListener("scroll", () => {
   const currentScrollTop = window.scrollY;
   if (currentScrollTop > lastScrollTop) {  // User is scrolling down
-    //header.style.top = `-${headerStyles.getPropertyValue("height")}`; // Adjust the value based on the height of your header
+    header.style.top = `-${headerStyles.getPropertyValue("height")}`; // Adjust the value based on the height of your header
     //Close mobile nav
     if (mobileNavOpen) openMobileNav();
   } else {   // User is scrolling up
-    //header.style.top = "0";
+    header.style.top = "0";
   }
   lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For Mobile or negative scrolling
 });
@@ -58,32 +58,32 @@ const slideInElements = document.getElementsByClassName('slide-in');
 const fadeInElements = document.getElementsByClassName('fade-in');
 
 // listen for scroll event and call animate function
-document.addEventListener('scroll', animate);
+// document.addEventListener('scroll', animate);
 
-animate();
-function animate() {
+// animate();
+// function animate() {
 
-  //For slide in animated elements
-  for (let i = 0; i < slideInElements.length; i++) {
-    let windowHeight = window.innerHeight;
-    let elementTop = slideInElements[i].getBoundingClientRect().top;
-    let elementVisible = 150;
+//   //For slide in animated elements
+//   for (let i = 0; i < slideInElements.length; i++) {
+//     let windowHeight = window.innerHeight;
+//     let elementTop = slideInElements[i].getBoundingClientRect().top;
+//     let elementVisible = 150;
     
-    if (elementTop < windowHeight - elementVisible) {
-      slideInElements[i].classList.add("slide-in-animate");
-    }
-  }
-  //For fade in animated elements
-  for (let i = 0; i < fadeInElements.length; i++) {
-    let windowHeight = window.innerHeight;
-    let elementTop = fadeInElements[i].getBoundingClientRect().top;
-    let elementVisible = 150;
+//     if (elementTop < windowHeight - elementVisible) {
+//       slideInElements[i].classList.add("slide-in-animate");
+//     }
+//   }
+//   //For fade in animated elements
+//   for (let i = 0; i < fadeInElements.length; i++) {
+//     let windowHeight = window.innerHeight;
+//     let elementTop = fadeInElements[i].getBoundingClientRect().top;
+//     let elementVisible = 150;
     
-    if (elementTop < windowHeight - elementVisible) {
-      fadeInElements[i].classList.add("fade-in-animate");
-    }
-  }
+//     if (elementTop < windowHeight - elementVisible) {
+//       fadeInElements[i].classList.add("fade-in-animate");
+//     }
+//   }
 
-}
+// }
 
 
