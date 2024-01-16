@@ -50,6 +50,8 @@ a, a:visited {
     color: var(--txt-color);
 }
 .btn {
+    display: block;
+    margin-top: 1rem;
     -webkit-border-radius: 29;
     -moz-border-radius: 29;
     border-radius: 29px;
@@ -63,6 +65,10 @@ a, a:visited {
 .btn:hover {
     color: var(--txt-color);
     background: var(--primary-active-color);
+}
+.big-btn {
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.6rem;
 }
 
 /* General section styles */
@@ -90,6 +96,13 @@ section {
 .grid-center {
     display: grid;
     place-items: center;
+}
+.center-me {
+    margin-left: auto;
+    margin-right: auto;
+}
+.center-txt {
+    text-align: center;
 }
 .flex-wrap {
     display: flex;
@@ -218,7 +231,7 @@ main {
     background: var(--bg);
 }
 
-/* About Me section styles */
+/* Image with text section styles */
 .img-w-text {
     grid-template-columns: auto 1fr;
     gap: 3rem;
@@ -230,13 +243,27 @@ main {
     height: 350px;
     width: 350px;
 }
+.one-on-one-picture {
+    background-image: url(pictures/MChoiceFour_resize.jpeg);
+    background-size: cover;
+    border-radius: 5%;
+    height: 500px;
+    width: 400px;
+}
 @media screen and (max-width: 768px) {
     .img-w-text {
         grid-template-columns: auto;
     }
+    .img-text {
+        grid-row: 1;
+    }
     .profile-picture {
         height: 250px;
         width: 250px;
+    }
+    .one-on-one-picture {
+        height: 400px;
+        width: 300px;
     }
 }
 
