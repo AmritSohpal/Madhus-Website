@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="scroll.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="form.css">
     <title>Document</title>
@@ -43,7 +42,7 @@
                 </p>
                 <p><strong>Please provide an email! </strong></p>
             </div>
-            <div class="contactForum">
+            <div class="contactForum" id = "contactForum">
                 <form id = "clientRequest" action="" data-netlify = "true">
                     <div id="inputContainer">
                         <div class="input-group">
@@ -73,12 +72,22 @@
                         <option value="One on One classes">1 v 1</option>
                         <option value="specialEvent">Special Event</option>
                     </select>
-                    <label for="submitForum"></label>
+                    <!--
+
+                        <label for="submitForum"></label>
                     <input type="submit" name="submitForum" id="submitForum">
+                    -->
+            
+                    <button class="g-recaptcha" 
+                        data-sitekey="reCAPTCHA_site_key" 
+                        data-callback='onSubmit' 
+                        data-action='submit'>Submit aaa
+                    </button>
                 </form>
             </div>
         </div>
     </div>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="form.js"></script>
 </body>
 </html>

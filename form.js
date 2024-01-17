@@ -50,11 +50,15 @@ addEventListener("resize", (event) => {
 
 
 //for submission 
-
+/*
 const submission = document.getElementById("submitForum")
 
 submission.addEventListener("click", function(){
   console.log("Hello World")
 })
+*/
 
 
+function onSubmit(token) {
+  document.getElementById("contactForum").submit();
+}
