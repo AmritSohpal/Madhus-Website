@@ -46,8 +46,13 @@ p {
     line-height: 1.5rem;
 }
 a, a:visited {
+    display: block;
     text-decoration: none;
     color: var(--txt-color);
+}
+.inline-link {
+    display: inline;
+    text-decoration: underline;
 }
 .btn {
     display: block;
@@ -69,6 +74,19 @@ a, a:visited {
 .big-btn {
     margin-top: 1.5rem;
     padding: 0.8rem 1.6rem;
+}
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0.5rem 0;
+    background-color: var(--bg-secondary);
+}
+.social-link {
+    transition: all 0.25s ease-in-out;
+}
+.social-link:hover {
+    scale: 1.2;
 }
 
 /* General section styles */
@@ -254,7 +272,7 @@ main {
     .img-w-text {
         grid-template-columns: auto;
     }
-    .img-text {
+    .img-text-reverse {
         grid-row: 1;
     }
     .profile-picture {
@@ -293,5 +311,26 @@ main {
     }
 }
 
-
+/* Footer styles */
+footer {
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+.footer-nav {
+    display: flex;
+    gap: 3rem;
+}
+.footer-nav .footer-item:hover {
+    color: var(--txt-focus);
+    text-decoration: underline;
+}
+.copyright {
+    width: 100%;
+    border-top: 1px rgb(175, 175, 175) solid;
+    padding: 0.5rem 0;
+    font-size: 0.7rem;
+}
 
