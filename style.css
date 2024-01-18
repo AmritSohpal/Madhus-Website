@@ -255,11 +255,28 @@ main {
     gap: 3rem;
 }
 .profile-picture {
+    position: relative;
     background-image: url(pictures/Madhu.jpg);
     background-size: cover;
     border-radius: 50%;
     height: 350px;
     width: 350px;
+    z-index: 1;
+}
+.accent-wrapper {
+    position: relative;
+    z-index: 2;
+}
+.img-accent {
+    display: block;
+    height: 350px;
+    width: 350px;
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    background-color: var(--primary-active-color);
+    border-radius: 50%;
+    z-index: -1;
 }
 .one-on-one-picture {
     background-image: url(pictures/MChoiceFour_resize.jpeg);
@@ -282,6 +299,10 @@ main {
     .one-on-one-picture {
         height: 400px;
         width: 300px;
+    }
+    .img-accent {
+        height: 250px;
+        width: 250px;
     }
 }
 
