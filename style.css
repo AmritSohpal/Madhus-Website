@@ -221,7 +221,9 @@ header{
 
 /* Parallax image banner styles */
 .img-banner {
-    height: 700px;
+    height: calc(700px + var(--header-height));
+    padding-top: var(--header-height);
+    transition: all 0.3s ease-in-out;
 }
 .parallax {
     position: fixed;

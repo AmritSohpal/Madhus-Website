@@ -6,15 +6,18 @@
 let lastScrollTop = 0;
 const header = document.getElementById("headerContainer");
 const headerStyles = window.getComputedStyle(header);
+const banner = document.getElementById("banner");
 
 window.addEventListener("scroll", () => {
   const currentScrollTop = window.scrollY;
   if (currentScrollTop > lastScrollTop) {  // User is scrolling down
     header.style.top = `-${headerStyles.getPropertyValue("height")}`; // Adjust the value based on the height of your header
-    //Close mobile nav
-    if (mobileNavOpen) openMobileNav();
-  } else {   // User is scrolling up
+    banner.style.paddingTop = "0px";
+    if (mobileNavOpen) openMobileNav(); //Close mobile nav
+  } 
+  else {   // User is scrolling up
     header.style.top = "0";
+    banner.style.paddingTop = `${headerStyles.getPropertyValue("height")}`;
   }
   lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For Mobile or negative scrolling
 });
