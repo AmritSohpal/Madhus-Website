@@ -5,3 +5,8 @@
   force = true
 
   
+[[redirects]]
+  from = "https://instagram.mlakha.beauty/*"
+  to = "https://www.instagram.com/mlakhabeauty/?hl=en:splat"
+  status = 301
+  force = true
