@@ -146,6 +146,14 @@ section {
 .fade-in-animate {
     opacity: 1;
 }
+.zoom-hover {
+    transition: scale 0.25s ease-in-out;
+}
+@media screen and (min-width: 769px) {
+    .zoom-hover:hover {
+        scale: 1.1;
+    }
+}
 
 /* Header Styles */
 .header-container {
