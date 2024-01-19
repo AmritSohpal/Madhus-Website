@@ -1,0 +1,7 @@
+[[redirects]]
+  from = "https://amazon.mlakha.beauty/*"
+  to = "https://www.amazon.com/shop/mlakhabeauty?ref_=cm_sw_r_cp_ud_aipsfshop_aipsfmlakhabeauty_ZK4T7XBXDQYFHSW0W14V:splat"
+  status = 301
+  force = true
+
+  
