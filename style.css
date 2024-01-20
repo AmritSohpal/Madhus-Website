@@ -348,7 +348,6 @@ main {
 .input-group textarea {
     resize: none;
 }
-
 .submit-btn {
     justify-self: flex-start;
 }
