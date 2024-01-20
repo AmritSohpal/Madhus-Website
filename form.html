@@ -45,7 +45,7 @@
             <div class="contactForum" id = "contactForum">
                 <form id = "clientRequest" action="" data-netlify = "true" data-netlify-recaptcha="true">
                     <div id="inputContainer">
-                        <input type="hidden" name="subject" value=" " />
+                        <input type="hidden" name="subject" value=" New Client request from " />
                         <div class="input-group">
                             <label for="clientName" id="clientName">Name</label>
                             <input type="text" id="clientName" name="clientName" required>
@@ -85,10 +85,10 @@
         document.getElementById('clientRequest').addEventListener('submit', function() {
             var clientName = document.getElementsByClassName('input-group').getElementById('clientName').value;
             var clientEmail = document.getElementsByClassName('input-group').getElementById('clientEmail').value;
-            document.getElementsByName('subject')[0].value = 'New Client request from ' + clientName + ' (' + clientEmail + ')';
+            document.getElementsByName('subject')[0].value =  clientName + ' (' + clientEmail + ')';
         });
     </script>
-    
+
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="form.js"></script>
 </body>
