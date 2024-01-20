@@ -5,35 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="form.css">
-    <title>Document</title>
+    <script src="script.js" defer></script>
+    <script src="form.js" defer></script>
+    <title>MLakha Beauty</title>
 </head>
 <body>
-    <header>
-        <a href="#" class = "logo">
-          <h1>MLakhaBeauty</h1>
-        </a>
-        <div id="hamburgerMenu" class="header-icon"> </div>
-        <nav class="header-nav header-nav-desktop">
-          <a href="index.html" class="header-item">Home</a>
-          <a href="#" class="header-item">Services</a>
-          <a href="form.html" class="header-item">Bookings</a>
-          <a href="#" class="header-item">Socials</a>
-        </nav>
-      </header>
-      <nav id="mobileNav" class="header-nav header-nav-mobile">
+    <div id="headerContainer" class="full-width grid-center header-container">
+        <header class="page-width">
+            <a href="index.html" class = "logo">
+                <h1>MLakhaBeauty</h1>
+            </a>
+            <div id="hamburgerMenu" class="header-icon"> </div>
+            <nav class="header-nav header-nav-desktop">
+            <a href="index.html" class="header-item">Home</a>
+            <a href="#services" class="header-item">Services</a>
+            <a href="form.html" class="header-item">Bookings</a>
+            </nav>
+        </header>
+    </div>
+    <nav id="mobileNav" class="header-nav header-nav-mobile">
         <a href="index.html" class="header-item">Home</a>
-        <a href="#" class="header-item">Services</a>
+        <a href="#services" class="header-item">Services</a>
         <a href="form.html" class="header-item">Bookings</a>
-        <a href="#" class="header-item">Socials</a>
-      </nav>
-    
-    <div class="grid" id = "gridder">
-        <div class="bookingInquries">
-            <div class="forumTitle">
+        <div class="header-item social-links">
+            <a class="social-link" href="https://www.instagram.com/mlakhabeauty" target="_blank"><img src="icons/insta.svg" alt="instagram logo" width="32" height="32"></a>
+            <a class="social-link" href="https://www.tiktok.com/@mlakhabeauty" target="_blank"><img src="icons/tiktok.svg" alt="tiktok logo" width="32" height="32"></object></a>
+            <a class="social-link" href="https://www.amazon.com/shop/mlakhabeauty" target="_blank"><img src="icons/amazon.svg" alt="amazon logo" width="32" height="32"></object></a>
+        </div>
+    </nav>
+
+    <main id="mainContent">
+
+        <section class="full-width grid-center">
+            <div class="page-width-small grid-center grid-gap-1">
                 <h1 id="inquiryTitle">Inquiry Form</h1>
-            </div>
-            <div class="bookingText">
                 <p>
                     Thank you for considering MlakhaBeauty as your hair and makeup artist! Non-Bridal and Bridal booking are open for 2023. 
                     Only Bridal bookings are open for 2024.
@@ -41,55 +46,62 @@
                     a retainer and signed contract is required.
                 </p>
                 <p><strong>Please provide an email! </strong></p>
-            </div>
-            <div class="contactForum" id = "contactForum">
-                <form id = "clientRequest" action="" data-netlify = "true" data-netlify-recaptcha="true">
-                    <div id="inputContainer">
-                        <input type="hidden" name="subject" value=" New Client request from " />
-                        <div class="input-group">
-                            <label for="clientName" id="clientName">Name</label>
-                            <input type="text" id="clientName" name="clientName" required>
-                        </div>
-                        <div class="input-group">
-                            <label for="email" id="clientEmail">Email*</label>
-                            <input type="text" id="clientEmail" name="email" required>
-                        </div>
+
+                <form id="clientRequest" class="grid-center grid-gap-1 full-width grid-2-col" action="" data-netlify="true" data-netlify-recaptcha="true">
+                    <input type="hidden" name="subject" value=" New " />
+                    <div class="input-group">
+                        <label for="clientName">Name</label>
+                        <input type="text" id="clientName" name="clientName" required>
                     </div>
-                    <div class="input-group" id = "inputNumber">
+                    <div class="input-group">
+                        <label for="clientEmail">Email</label>
+                        <input type="text" id="clientEmail" name="email" required>
+                    </div>
+                    <div class="input-group grid-col-span-2" id="inputNumber">
                         <label for="phoneNumber">Phone Number</label>
                         <input type="text" name="phoneNumber" id="phoneNumber">
                     </div>
-                    <div class="input-group">
+                    <div class="input-group grid-col-span-2">
                         <label for="messageInput">Message</label>
-                        <textarea name="messageInput" id="messageInput" cols="30" rows="10"></textarea>
-                        
+                        <textarea name="messageInput" id="messageInput" cols="30" rows="6"></textarea>                     
                     </div>
-                    <label for="typeOfEvent">Type of Event</label>
-                    <select name="typeOfEvent" id="typeOfEvent">
-                        <option value="bridal"> Bridal</option>
-                        <option value="nonBridal">Non-Bridal</option>
-                        <option value="bridalNonBridal">Bridal & Non-Bridal</option>
-                        <option value="photoShoot">photoshoot</option>
-                        <option value="One on One classes">1 v 1</option>
-                        <option value="specialEvent">Special Event</option>
-                    </select>
-                    <div data-netlify-recaptcha="true"></div>
-                    <label for="submitForum"></label>
-                    <input type="submit" name="submitForum" id="submitForum">
-                    
+                    <div class="input-group">
+                        <label for="typeOfEvent">Type of Event</label>
+                        <select name="typeOfEvent" id="typeOfEvent">
+                            <option value="bridal"> Bridal</option>
+                            <option value="nonBridal">Non-Bridal</option>
+                            <option value="bridalNonBridal">Bridal & Non-Bridal</option>
+                            <option value="photoShoot">photoshoot</option>
+                            <option value="One on One classes">1 v 1</option>
+                            <option value="specialEvent">Special Event</option>
+                        </select>
+                    </div>                    
+                    <div class="recaptcha grid-col-1-span-1" data-netlify-recaptcha="true"></div>
+                    <input class="btn big-btn submit-btn grid-col-1-span-1" type="submit" name="submitForum" id="submitForum"> 
                 </form>
             </div>
-        </div>
-    </div>
-    <script>
-        document.getElementById('clientRequest').addEventListener('submit', function() {
-            var clientName = document.getElementsByClassName('input-group').getElementById('clientName').value;
-            var clientEmail = document.getElementsByClassName('input-group').getElementById('clientEmail').value;
-            document.getElementsByName('subject')[0].value =  clientName + ' (' + clientEmail + ')';
-        });
-    </script>
+        </section>
 
-    <script src="https://www.google.com/recaptcha/api.js"></script>
-    <script src="form.js"></script>
+        <div class="full-width grid-center secondary-bg">
+            <footer class="page-width grid-center grid-gap-1">
+                <a href="index.html">
+                    <h1>MLakha Beauty</h1>
+                </a>
+                <nav class="footer-nav">
+                    <a href="index.html" class="footer-item">Home</a>
+                    <a href="#services" class="footer-item">Services</a>
+                    <a href="form.html" class="footer-item">Bookings</a>
+                </nav>
+                <div class="social-links">
+                    <a class="social-link" href="https://www.instagram.com/mlakhabeauty" target="_blank"><img src="icons/insta.svg" alt="instagram logo" width="32" height="32"></a>
+                    <a class="social-link" href="https://www.tiktok.com/@mlakhabeauty" target="_blank"><img src="icons/tiktok.svg" alt="tiktok logo" width="32" height="32"></object></a>
+                    <a class="social-link" href="https://www.amazon.com/shop/mlakhabeauty" target="_blank"><img src="icons/amazon.svg" alt="amazon logo" width="32" height="32"></object></a>
+                </div>
+            </footer>
+            <p class="center-txt copyright">© <script>document.write(new Date().getFullYear())</script> MLakhaBeauty. All rights reserved</p>
+        </div>
+
+    </main>
+    
 </body>
 </html>

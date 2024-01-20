@@ -114,6 +114,18 @@ section {
     display: grid;
     place-items: center;
 }
+.grid-gap-1 {
+    gap: 1rem;
+}
+.grid-2-col {
+    grid-template-columns: 1fr 1fr;
+}
+.grid-col-span-2 {
+    grid-column: 1 / span 2;
+}
+.grid-col-1-span-1 {
+    grid-column: 1;
+}
 .center-me {
     margin-left: auto;
     margin-right: auto;
@@ -243,6 +255,11 @@ header{
 
 /* Main Content absolute positioned for parallax effect */
 main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+
     position: absolute;
     left: 50%; 
     transform: translateX(-50%);
@@ -312,11 +329,35 @@ main {
     }
 }
 
+/* Form styles */
+#inquiryTitle {
+    font-size: 2rem;
+}
+.input-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.input-group input, .input-group textarea, .input-group select {
+    width: 100%;
+    border: 0.5px solid #ccc;
+    margin-top: 0.4rem;
+    padding: 0.4rem;
+    border-radius: 10px;
+}
+.input-group textarea {
+    resize: none;
+}
+
+.submit-btn {
+    justify-self: flex-start;
+}
+.recaptcha {
+    justify-self: flex-start;
+}
+
 /* Footer styles */
 footer {
-    display: grid;
-    place-items: center;
-    gap: 1rem;
     padding-top: 1rem !important;
     padding-bottom: 1rem !important;
 }
