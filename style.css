@@ -345,6 +345,10 @@ main {
     padding: 0.4rem;
     border-radius: 10px;
 }
+.input-group input:focus, .input-group textarea:focus, .input-group select:focus {
+    outline: none !important;
+    border: 2px solid var(--primary-active-color);
+}
 .input-group textarea {
     resize: none;
 }
