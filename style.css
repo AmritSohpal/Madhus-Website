@@ -90,7 +90,6 @@ a, a:visited {
 
 /* General section styles */
 section {
-    margin: 4rem 0;
     padding: 1.2rem 0;
 }
 .full-width {
@@ -258,8 +257,9 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 4rem;
+    padding-top: 4rem;
     min-height: 100vh;
-
     position: absolute;
     left: 50%; 
     transform: translateX(-50%);
