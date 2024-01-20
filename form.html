@@ -77,18 +77,18 @@
                     <label for="submitForum"></label>
                     <input type="submit" name="submitForum" id="submitForum">
                     
-
                 </form>
             </div>
         </div>
     </div>
     <script>
         document.getElementById('clientRequest').addEventListener('submit', function() {
-            var clientName = document.getElementById('clientName').value;
-            var clientEmail = document.getElementById('clientEmail').value;
+            var clientName = document.getElementsByClassName('input-group').getElementById('clientName').value;
+            var clientEmail = document.getElementsByClassName('input-group').getElementById('clientEmail').value;
             document.getElementsByName('subject')[0].value = 'New Client request from ' + clientName + ' (' + clientEmail + ')';
         });
     </script>
+    
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="form.js"></script>
 </body>
