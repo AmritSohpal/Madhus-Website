@@ -1,12 +1,23 @@
 [[redirects]]
-  from = "https://amazon.mlakha.beauty/*"
-  to = "https://www.amazon.com/shop/mlakhabeauty?ref_=cm_sw_r_cp_ud_aipsfshop_aipsfmlakhabeauty_ZK4T7XBXDQYFHSW0W14V:splat"
+  from = "https://amazon.mlakha.beauty/"
+  to = "https://www.amazon.com/shop/mlakhabeauty?ref_=cm_sw_r_cp_ud_aipsfshop_aipsfmlakhabeauty_ZK4T7XBXDQYFHSW0W14V"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "https://instagram.mlakha.beauty/"
+  to = "https://www.instagram.com/mlakhabeauty/?hl=en""
+  status = 302
+  force = true
+  
+[[redirects]]
+  from = "https://*.mlakha.beauty/*"
+  to = "https://www.madhulakha.com:splat"
   status = 301
   force = true
 
-  
 [[redirects]]
-  from = "https://instagram.mlakha.beauty/*"
+  from = "https://mlakha.beauty/*"
   to = "https://www.instagram.com/mlakhabeauty/?hl=en:splat"
   status = 301
   force = true
