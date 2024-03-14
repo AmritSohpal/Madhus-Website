@@ -338,14 +338,14 @@ main {
     gap: 3rem;
 }
 .profile-picture {
-    background-image: url(pictures/Madhu.jpg);
+    background-image: url(pictures/IMG_2294.JPG);
     background-size: cover;
     border-radius: 50%;
     height: 350px;
     width: 350px;
 }
 .one-on-one-picture {
-    background-image: url(pictures/MChoiceFour_resize.jpeg);
+    background-image: url(pictures/oneOnOne.jpg);
     background-size: cover;
     border-radius: 5%;
     height: 500px;
