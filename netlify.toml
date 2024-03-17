@@ -5,6 +5,18 @@
   force = true
 
 [[redirects]]
+  from = "https://www.madhulakha.com/"
+  to = "https://www.mlakhabeauty.com/" 
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "https://*.madhulakha.com/"
+  to = "https://www.mlakhabeauty.com/" 
+  status = 302
+  force = true
+
+[[redirects]]
   from = "https://instagram.mlakha.beauty/"
   to = "https://www.instagram.com/mlakhabeauty/?hl=en"
   status = 302
