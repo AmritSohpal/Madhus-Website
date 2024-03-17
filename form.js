@@ -23,7 +23,7 @@ document.getElementById('clientRequest').addEventListener('submit', function(eve
 
 window.onload = function(){
   var params = new URLSearchParams(window.location.search);
-  var eventType = urlParams.get('typeOfEvent');
+  var eventType = params.get('typeOfEvent');
   if (eventType){
     document.getElementById("typeOfEvent").value = eventType;
   }
