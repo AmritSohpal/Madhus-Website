@@ -30,6 +30,10 @@ window.onload = function(){
 };
 
 document.getElementById('location').addEventListener('change', function() {
-  var displayStyle = this.value == 'Other' ? 'block' : 'none';
-  document.getElementById('otherMessage').style.display = displayStyle;
+  if(this.value == "Other"){
+    document.getElementById("otherMessage").innerHTML = "Please include the city where you require the service in your message.";
+  }
+  else{
+    document.getElementById("otherMessage").innerHTML = "";
+  }
 });
