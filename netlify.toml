@@ -11,7 +11,7 @@
   force = true
 
 [[redirects]]
-  from = "https://*.madhulakha.com/"
+  from = "https://madhulakha.com/*"
   to = "https://www.mlakhabeauty.com/" 
   status = 302
   force = true
