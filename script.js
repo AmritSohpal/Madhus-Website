@@ -89,4 +89,9 @@ function animate() {
 
 }
 
+function bookService(serviceType){
+  window.location.href = "form.html?typeOfEvent=" + encodeURIComponent(serviceType);
+}
+
+
 
