@@ -16,6 +16,5 @@ function onSubmit(token) {
 document.getElementById('clientRequest').addEventListener('submit', function(event) {
   var clientName = document.getElementById('clientName').value;
   var clientEmail = document.getElementById('clientEmail').value;
-  var location = focument.getElementById('location').value;
-  document.getElementsByName('subject')[0].value = "New Client inquiry: " + clientName + ' (' + clientEmail + ')' + "Location" + location ;
+  document.getElementsByName('subject')[0].value = "New Client inquiry: " + clientName + ' (' + clientEmail + ')';
 });
