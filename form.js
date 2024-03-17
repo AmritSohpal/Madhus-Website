@@ -28,3 +28,8 @@ window.onload = function(){
     document.getElementById("typeOfEvent").value = eventType;
   }
 };
+
+document.getElementById('location').addEventListener('change', function() {
+  var displayStyle = this.value == 'Other' ? 'block' : 'none';
+  document.getElementById('otherMessage').style.display = displayStyle;
+});
